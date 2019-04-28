@@ -1,9 +1,9 @@
 version: '3'
 services:
   db:
-    image: harikarajavaram/app_db
+    image: shreyakupadhyay/thesis_db
   web:
-    image: harikarajavaram/app_web
+    image: shreyakupadhyay/thesis_app
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
